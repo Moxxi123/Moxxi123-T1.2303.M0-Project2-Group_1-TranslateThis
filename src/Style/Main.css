@@ -1,0 +1,298 @@
+/*MENU*/
+
+/* xóa màu mặc định của button*/
+.menu-button{
+    -fx-background-color: transparent;
+    -fx-border-color: none;
+}
+
+/*định dạng hover cho button label*/
+.file .label:hover, .setting .label:hover, .tool .label:hover, .translator .label:hover{
+    -fx-text-fill: white;
+}
+
+/*định dạng hover cho button*/
+.menu-button:hover{
+    -fx-background-color: #3335d0;
+    -fx-background-radius: 0;
+}
+
+/*định dạng khi click vào button*/
+.menu-button:pressed {
+    -fx-background-color: #0465ff;
+    -fx-background-radius: 0;
+}
+
+/*định dạng hover cho menu item*/
+.menu-item:focused, .menu-item:hovered {
+    -fx-background-color: #3335d0;
+}
+
+/*tắt hiệu ứng của .setting*/
+.setting .menu-item:focused,
+.setting .menu-item:hovered,
+.setting .menu-item:pressed {
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+}
+
+.menu-button.setting .menu-item .label,
+.menu-button.setting .menu-item .label:hover,
+.menu-button.setting .menu-item .label:focused {
+    -fx-text-fill: black;
+}
+
+
+/*ẩn nút mũi tên*/
+/* menu button sẽ đẩy button dài ra để nhét mũi tên vào, code ở dưới ngăn việc đẩy dài button ra để hiển thị mũi tên -> rút ngắn lại ẩn đi phần chứa mũi tên ở phía sau*/
+.menu-button .arrow-button, .menu-button .arrow-button .arrow {
+    -fx-padding: 0;
+}
+
+/*thay đổi màu cho toggle switch*/
+.toggle .thumb-area {
+    -fx-background-color: #e00000;
+}
+
+.toggle:selected .thumb-area {
+    -fx-background-color: #a7f432;
+}
+
+/*FOOTER*/
+/* định dạng phần hiển thị ngày*/
+.date{
+    -fx-border-color: transparent black transparent transparent;
+    -fx-border-width: 0 1 0 0;
+    -fx-background-color: transparent;
+}
+
+/*NỘI DUNG TRANG TỪ ĐIỂN*/
+/* định dạng cho VBox bọc bên ngoài khối search*/
+.searchbox{
+    -fx-background-color: white;
+    -fx-border-color: #e5e5e5;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+/* định dạng phần nhập dữ liệu*/
+.searchtext{
+    -fx-background-color: transparent;
+}
+
+.searchtext .content {
+    -fx-background-color: white;
+}
+
+.text-area .scroll-pane .increment-button,
+.text-area .scroll-pane .decrement-button {
+    -fx-padding: 0 0 0 0;
+    -fx-scale-x: 0;
+    -fx-scale-y: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+    -fx-max-height: 0;
+}
+
+.text-area .scroll-pane .scroll-bar:vertical .thumb{
+    -fx-background-color: #3335d0;
+}
+
+.selectlanguage{
+    -fx-background-color: transparent;
+    -fx-font-size: 14px;
+}
+
+.combo-box-popup .list-view .list-cell .text {
+    -fx-font-size: 14px;
+}
+
+.translatebutton{
+    -fx-background-color: #3335d0;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+.translatebutton:pressed{
+    -fx-background-color: #0465ff;
+}
+
+/* định dạng phần xuất dữ liệu*/
+.displaytext{
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent transparent #3335d0;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-width: 0 0 0 2.5;
+}
+
+.displaytext .content{
+    -fx-border-color: transparent transparent transparent #3335d0;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-width: 0 0 0 2.5;
+    -fx-background-color: white;
+}
+
+.addbutton{
+    -fx-background-color: transparent;
+    -fx-border-color: #3335d0;
+    -fx-text-fill: #3335d0;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+.addbutton:pressed{
+    -fx-border-color: #0465ff;
+    -fx-text-fill: #0465ff;
+}
+
+/*TRANG TỪ ĐIỂN*/
+/* định dạng cho VBox bọc bên ngoài khối search*/
+.searchbox{
+    -fx-background-color: white;
+    -fx-border-color: #e5e5e5;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+/* định dạng phần nhập dữ liệu*/
+.searchtext{
+    -fx-background-color: transparent;
+}
+
+.searchtext .content {
+    -fx-background-color: white;
+}
+
+.text-area .scroll-pane .increment-button,
+.text-area .scroll-pane .decrement-button {
+    -fx-padding: 0 0 0 0;
+    -fx-scale-x: 0;
+    -fx-scale-y: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
+    -fx-max-height: 0;
+}
+
+.text-area .scroll-pane .scroll-bar:vertical .thumb{
+    -fx-background-color: #3335d0;
+}
+
+.selectlanguage{
+    -fx-background-color: transparent;
+    -fx-font-size: 14px;
+}
+
+.combo-box-popup .list-view .list-cell .text {
+    -fx-font-size: 14px;
+}
+
+.translatebutton{
+    -fx-background-color: #3335d0;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+.translatebutton:pressed{
+    -fx-background-color: #0465ff;
+}
+
+/* định dạng phần xuất dữ liệu*/
+.displaytext{
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent transparent #3335d0;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-width: 0 0 0 2.5;
+}
+
+.addbutton{
+    -fx-background-color: transparent;
+    -fx-border-color: #3335d0;
+    -fx-text-fill: #3335d0;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}
+
+.addbutton:pressed{
+    -fx-border-color: #0465ff;
+    -fx-text-fill: #0465ff;
+}
+
+/* TRANG DANH SÁCH TỪ */
+.chon{
+    -fx-background-color: white;
+    -fx-font-size: 14px;
+    -fx-border-color: #3335d0;
+}
+
+.timkiemtu{
+    -fx-font-size: 14px;
+    -fx-border-color: #3335d0;
+}
+
+.table-view{
+    -fx-background-color: transparent;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: #3335d0;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+.them{
+    -fx-background-color: #3335d0;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+
+}
+.them:pressed{
+    -fx-background-color: #0465ff;
+}
+
+.themtuvunghethong{
+    -fx-background-color: white;
+    -fx-text-fill:  #28a6dd;
+    -fx-background-radius: 20;
+    -fx-border-color: #28a6dd;
+    -fx-border-radius: 20;
+}
+
+.themtuvunghethong:pressed{
+    -fx-background-color: #0465ff;
+    -fx-text-fill:  white;
+    -fx-background-radius: 20;
+    -fx-border-color: #0465ff;
+    -fx-border-radius: 20;
+}
+
+TRANG CHỈNH SỬA TỪ
+.input{
+    -fx-border-color: #cdcfdc;
+    -fx-background-color: white;
+    -fx-background-radius: 5;
+    -fx-border-width: 1 1 1 1;
+    -fx-border-radius: 5;
+}
+
+
+
+
+
+

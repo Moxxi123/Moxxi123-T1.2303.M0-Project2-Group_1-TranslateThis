@@ -1,0 +1,82 @@
+CREATE TABLE AnhViet (
+    id                INTEGER PRIMARY KEY AUTOINCREMENT
+                              NOT NULL,
+    word              TEXT    NOT NULL
+                              UNIQUE
+                              COLLATE NOCASE,
+    pronounce         TEXT    NOT NULL,
+    type              TEXT    CHECK (type IN ('noun', 'verb', 'adjective', 'adverb', 'null') ) 
+                              NOT NULL,
+    definition        TEXT    NOT NULL,
+    [update]          TEXT,
+    updateddefinition TEXT,
+    [check]           INTEGER NOT NULL
+                              CHECK ([check] IN (0, 1) ) 
+                              DEFAULT (0) 
+);
+
+INSERT INTO AnhViet (word, pronounce, type, definition, [check]) 
+VALUES 
+    ("apple", "/ˈæp.l̩/", "noun", "quả táo", "", "", 0),
+
+
+UPDATE AnhViet
+SET word = LOWER(word),
+    definition = LOWER(definition)
+
+
+UPDATE AnhViet
+SET pronounce = '/'||pronounce||'/'
+WHERE id BETWEEN AND ;
+
+INSERT INTO AnhViet (word, pronounce, type, definition, [check])
+SELECT word, pronounce, type, definition, [check]
+FROM AnhViet_Dictionary
+ORDER BY word ASC;
+
+
+CREATE TABLE AnhAnh (
+    id                INTEGER PRIMARY KEY AUTOINCREMENT
+                              NOT NULL,
+    word              TEXT    NOT NULL
+                              UNIQUE
+                              COLLATE NOCASE,
+    pronounce         TEXT    NOT NULL,
+    type              TEXT    CHECK (type IN ('noun', 'verb', 'adjective', 'adverb', 'null') ) 
+                              NOT NULL,
+    definition        TEXT    NOT NULL,
+    [update]          TEXT,
+    updateddefinition TEXT,
+    [check]           INTEGER NOT NULL
+                              CHECK ([check] IN (0, 1) ) 
+                              DEFAULT (0) 
+);
+
+
+CREATE TABLE AnhViet_DefaultData (
+    id         INTEGER PRIMARY KEY AUTOINCREMENT
+                       NOT NULL,
+    word       TEXT    NOT NULL
+                       UNIQUE
+                       COLLATE NOCASE,
+    pronounce  TEXT    NOT NULL,
+    type       TEXT    CHECK (type IN ('noun', 'verb', 'adjective', 'adverb') ) 
+                       NOT NULL,
+    definition TEXT    NOT NULL
+);
+
+CREATE TABLE AnhAnh_DefaultData (
+    id         INTEGER PRIMARY KEY AUTOINCREMENT
+                       NOT NULL,
+    word       TEXT    NOT NULL
+                       UNIQUE
+                       COLLATE NOCASE,
+    pronounce  TEXT    NOT NULL,
+    type       TEXT    CHECK (type IN ('noun', 'verb', 'adjective', 'adverb') ) 
+                       NOT NULL,
+    definition TEXT    NOT NULL
+);
+
+
+
+
