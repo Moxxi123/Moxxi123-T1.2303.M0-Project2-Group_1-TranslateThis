@@ -127,6 +127,8 @@ public class TranslateThis_HangManGamePageController implements Initializable {
     private int luoc_choi = 3;
 
     private int diem_BD = 5;
+    
+    private int err_tang = 0;
 
     private int tongDiem;
 
@@ -317,14 +319,8 @@ public class TranslateThis_HangManGamePageController implements Initializable {
                 kytu.setAlignment(Pos.CENTER);
                 kytu.setPrefSize(50, 50);
 
-                int soLanThuSai[] =
-                {
-                    0
-                };
-
-                kytu.setOnMousePressed(e ->
-                {
-
+                
+                kytu.setOnMousePressed(e ->{
                     String buttonText = kytu.getText();// tạo biến buttonText và gán kytu vào nó
 
                     boolean correctGuess = false;// tạo biến correctGuess để check true false
@@ -342,18 +338,14 @@ public class TranslateThis_HangManGamePageController implements Initializable {
                         }
                     }
 
-                    if (!correctGuess)
-                    {
-                        soLanThuSai[0]++;
-                        giamGiaTri();
-                        truDiemBD();
-                        if (luoc_choi > 0)
-                        {
+                    if (!correctGuess){
+                        if (luoc_choi > 1){
                             alert_fail();
                         }
-
-                        if (soLanThuSai[0] > 2)
-                        {
+                        giamGiaTri();
+                        truDiemBD();
+                        tang_err();
+                        if (err_tang > 2){
                             sai3Lan();
                             disableAllButtonsKytu(true);
                             AlertFail_ALL();
@@ -503,6 +495,7 @@ public class TranslateThis_HangManGamePageController implements Initializable {
         DisplayNextWord();
         CountonPage();
         resetGiatri();
+        reset_err();
         capNhapDiemBD();
     }
 
@@ -526,16 +519,20 @@ public class TranslateThis_HangManGamePageController implements Initializable {
     
 //===========================các method xử lý lược đoán ký tự===================
 
+    private int tang_err(){
+        err_tang++;
+        return err_tang;
+    }
+
+    private int reset_err(){
+        err_tang = 0;
+        return err_tang;
+    } 
+    
     private void giamGiaTri() {
-        if (luoc_choi > 0)
-        {
+        if (luoc_choi > 0){
             luoc_choi--;
             updateImageViews();
-        }
-        if (luoc_choi == 0)
-        {
-            sai3Lan();
-            disableAllButtonsKytu(true);
         }
     }
 
