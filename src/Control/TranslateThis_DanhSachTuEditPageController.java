@@ -19,6 +19,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -98,6 +99,9 @@ public class TranslateThis_DanhSachTuEditPageController implements Initializable
         ObservableList<String> typeoption = FXCollections.observableArrayList("noun", "verb", "adjective", "adverb");
         type.setItems(typeoption);
         type.setValue("noun");
+        
+        // Chỉ cho xóa ngày
+        DeleteOnlyDatePicker();
 
     }
 
@@ -176,6 +180,18 @@ public class TranslateThis_DanhSachTuEditPageController implements Initializable
         {
             updatenewdefinition = null;
         }
+    }
+    
+    // Chỉ cho xóa ngày
+    private void DeleteOnlyDatePicker() {
+        //  Lọc sự kiện cho DatePicker
+        date.addEventFilter(KeyEvent.KEY_PRESSED, event -> {
+            if (event.getCode() == KeyCode.DELETE || event.getCode() == KeyCode.BACK_SPACE) {
+                date.setValue(null);
+            } else {
+                event.consume();
+            }
+        });
     }
 
     // Ẩn nút OK khi có thông báo lỗi hiển thị
