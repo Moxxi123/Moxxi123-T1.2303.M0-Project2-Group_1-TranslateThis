@@ -202,7 +202,7 @@
                               <Insets bottom="10.0" />
                            </VBox.margin>
                         </Label>
-                        <DatePicker fx:id="date" onAction="#DateUpdate" prefHeight="30.0" prefWidth="174.0" style="-fx-font-size: 14;" styleClass="input" stylesheets="@../Style/Main.css" />
+                        <DatePicker fx:id="date" editable="false" onAction="#DateUpdate" prefHeight="30.0" prefWidth="174.0" style="-fx-font-size: 14;" styleClass="input" stylesheets="@../Style/Main.css" />
                      </children>
                      <VBox.margin>
                         <Insets />
