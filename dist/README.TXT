@@ -11,7 +11,9 @@ JAR files manifest file (MANIFEST.MF).
 To run the project from the command line, go to the dist folder and
 type the following:
 
-java -jar "TranslateThis.jar" 
+java --module-path "..\javafx-sdk-21\lib" --add-modules javafx.controls,javafx.fxml --add-exports javafx.base/com.sun.javafx.event=ALL-UNNAMED -jar TranslateThis.jar
+
+To run the project directly, use run.bat file.
 
 To distribute this project, zip up the dist folder (including the lib folder)
 and distribute the ZIP file.
