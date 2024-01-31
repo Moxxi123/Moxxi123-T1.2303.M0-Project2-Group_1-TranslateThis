@@ -24,6 +24,7 @@ GitHub report link: https://github.com/Moxxi123/Moxxi123-T1.2303.M0-Project2-Gro
 Project published at: https://github.com/Moxxi123/Moxxi123-T1.2303.M0-Project2-Group_1-TranslateThis
 
 ============================
+
 How to run:
 To run the project, open folder dist, and click run.bat to start the application.
 
