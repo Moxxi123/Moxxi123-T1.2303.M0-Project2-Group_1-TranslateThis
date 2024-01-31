@@ -14,7 +14,7 @@ Project title: Translate This - Personal Dictionary
 
          Bui Thi Nhung (nhungbtt1s2302041@fpt.edu.vn) Student1459130
          
-         Truong Nguyen Quang Huy Student1468180
+         Truong Nguyen Quang Huy (huytnqts2302027@fpt.edu.vn) Student1468180
 ============================
 
 GitHub report link: https://github.com/Moxxi123/Moxxi123-T1.2303.M0-Project2-Group_1-TranslateThis/tree/master/Documentation
